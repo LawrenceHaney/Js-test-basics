@@ -7,8 +7,30 @@
     // output: 7
 
 function daysPosition(day, offset) {
-
+switch (offset){
+    case true:
+        if (day == 'sunday'){return 7}
+        if (day == 'monday'){return 1}
+        if (day == 'tuesday'){return 2}
+        if (day == 'wensday'){return 3}
+        if (day == 'thursday'){return 4}
+        if (day == 'friday'){return 5}
+        if (day == 'saturday'){return 6}
+        else return "That's not a day of the week"
+        break;
+    default:
+        if (day == 'sunday'){return 1}
+        if (day == 'monday'){return 2}
+        if (day == 'tuesday'){return 3}
+        if (day == 'wensday'){return 4}
+        if (day == 'thursday'){return 5}
+        if (day == 'friday'){return 6}
+        if (day == 'saturday'){return 7}
+        else return "That's not a day of the week"
+        break;
+        }
 }
+
 
 
 // --------------------------------------------
@@ -27,6 +49,28 @@ function daysPosition(day, offset) {
  */
 
  function golfScore(score, par) {
+     switch (score-par){
+         case -3:
+            return "Ace"
+         break;
+         case -2:
+            return "Eagle"
+         break;
+         case -1:
+            return "Birdie"
+         break;
+         case 0:
+            return "Par"
+         break;
+         case 1:
+            return "Bogie"
+         break;
+         case 2:
+            return "Double Bogie"
+         break;
+         default:
+             return "Ouch"
+     }
 
  }
  
@@ -52,5 +96,43 @@ function daysPosition(day, offset) {
 let count = 0
 
 function cardCounter(card) {
+switch(card){
+    case "2":
+        count ++
+    break;
+    case "3":
+        count ++
+    break;
+    case "4":
+        count ++
+    break;
+    case "5":
+        count ++
+    break;
+    case "6":
+        count ++
+    break;
+    case "10":
+        count --
+    break;
+    case "J":
+        count --
+    break;
+    case "Q":
+        count --
+    break;
+    case "K":
+        count --
+    break;
+    case "A":
+        count --
+    break;
+}
+    
+let count = count
+if (count>0){return count+"bet"}
+else return count+"hold"
+
+
 
 }
